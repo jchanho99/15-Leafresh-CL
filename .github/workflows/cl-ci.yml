@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./terraform/v2-docker/dev
+        working-directory: ./
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -100,7 +100,7 @@ jobs:
       pull-requests: write
 
     env:
-      TF_ROOT: ./terraform/v2-docker/dev
+      TF_ROOT: ./
       # This instructs the CLI to send cost estimates to Infracost Cloud. Our SaaS product
       #   complements the open source CLI by giving teams advanced visibility and controls.
       #   The cost estimates are transmitted in JSON format and do not contain any cloud
@@ -168,7 +168,7 @@ jobs:
   pluralith:
     runs-on: ubuntu-latest
     env:
-      working-directory: ./terraform/v2-docker/dev
+      working-directory: ./
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
